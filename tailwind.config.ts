@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				dyslexic: ['OpenDyslexic', 'Comic Sans MS', 'Arial', 'sans-serif'],
+				comic: ['Comic Sans MS', 'OpenDyslexic', 'Arial', 'sans-serif']
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,6 +57,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom colors for our dyslexia-friendly theme
+				pastel: {
+					yellow: '#FEF7CD',
+					green: '#F2FCE2',
+					blue: '#D3E4FD',
+					purple: '#E5DEFF',
+					pink: '#FFDEE2',
+					peach: '#FDE1D3',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +98,32 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'bounce-slight': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' }
+				},
+				'wiggle': {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
+				},
+				'pop': {
+					'0%': { transform: 'scale(0.95)', opacity: '0' },
+					'70%': { transform: 'scale(1.05)' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'bounce-slight': 'bounce-slight 2s ease-in-out infinite',
+				'wiggle': 'wiggle 2s ease-in-out infinite',
+				'pop': 'pop 0.3s ease-out'
 			}
 		}
 	},
