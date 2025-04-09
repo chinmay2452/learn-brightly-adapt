@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { Book, Lightbulb, PlayCircle, PuzzlePiece, Star, FileText } from 'lucide-react';
+import { Book, Lightbulb, PlayCircle, Puzzle, Star, FileText } from 'lucide-react';
 import AnimatedIcon from './AnimatedIcon';
 
 const categories = [
   { name: 'Reading', icon: <Book />, color: 'bg-pastel-blue' },
   { name: 'Writing', icon: <FileText />, color: 'bg-pastel-green' },
   { name: 'Videos', icon: <PlayCircle />, color: 'bg-pastel-yellow' },
-  { name: 'Games', icon: <PuzzlePiece />, color: 'bg-pastel-pink' },
+  { name: 'Games', icon: <Puzzle />, color: 'bg-pastel-pink' },
   { name: 'Tips', icon: <Lightbulb />, color: 'bg-pastel-purple' },
   { name: 'Awards', icon: <Star />, color: 'bg-pastel-peach' },
 ];

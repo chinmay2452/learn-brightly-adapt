@@ -2,7 +2,7 @@
 import React from 'react';
 import LearningCard from './LearningCard';
 import ReadingText from './ReadingText';
-import { BookOpen, Video, Mic, PuzzlePiece } from 'lucide-react';
+import { BookOpen, Video, Mic, Puzzle } from 'lucide-react';
 
 const LearningModules = () => {
   return (
@@ -54,7 +54,7 @@ const LearningModules = () => {
         
         <LearningCard 
           title="Word Games" 
-          icon={<PuzzlePiece />}
+          icon={<Puzzle />}
           color="green"
         >
           <ReadingText>

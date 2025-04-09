@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BookOpen, Settings, VolumeUp } from 'lucide-react';
+import { BookOpen, Settings, Volume2 } from 'lucide-react';
 import IconButton from './IconButton';
 
 const DyslexiaHeader = () => {
@@ -14,7 +14,7 @@ const DyslexiaHeader = () => {
         
         <div className="flex items-center gap-2">
           <button className="p-2 rounded-full bg-pastel-yellow hover:bg-amber-200 transition-colors">
-            <VolumeUp className="h-6 w-6" />
+            <Volume2 className="h-6 w-6" />
           </button>
           <button className="p-2 rounded-full bg-pastel-purple hover:bg-purple-200 transition-colors">
             <Settings className="h-6 w-6" />
