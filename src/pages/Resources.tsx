@@ -1,9 +1,8 @@
-
 import React from 'react';
 import DyslexiaHeader from '@/components/DyslexiaHeader';
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { VideoIcon, FileText, BookOpen, GraduationCap, External } from 'lucide-react';
+import { VideoIcon, FileText, BookOpen, GraduationCap, ExternalLink } from 'lucide-react';
 import ReadingText from '@/components/ReadingText';
 import LearningCard from '@/components/LearningCard';
 import AnimatedIcon from '@/components/AnimatedIcon';
@@ -278,16 +277,16 @@ const Resources = () => {
               <h3 className="text-xl font-bold mb-4">External Resources</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Button variant="outline" className="justify-start" onClick={() => window.open('https://www.understood.org', '_blank')}>
-                  <External className="mr-2 h-4 w-4" /> Understood.org
+                  <ExternalLink className="mr-2 h-4 w-4" /> Understood.org
                 </Button>
                 <Button variant="outline" className="justify-start" onClick={() => window.open('https://dyslexiaida.org', '_blank')}>
-                  <External className="mr-2 h-4 w-4" /> International Dyslexia Association
+                  <ExternalLink className="mr-2 h-4 w-4" /> International Dyslexia Association
                 </Button>
                 <Button variant="outline" className="justify-start" onClick={() => window.open('https://www.readingrockets.org', '_blank')}>
-                  <External className="mr-2 h-4 w-4" /> Reading Rockets
+                  <ExternalLink className="mr-2 h-4 w-4" /> Reading Rockets
                 </Button>
                 <Button variant="outline" className="justify-start" onClick={() => window.open('https://www.dyslexicadvantage.org', '_blank')}>
-                  <External className="mr-2 h-4 w-4" /> Dyslexic Advantage
+                  <ExternalLink className="mr-2 h-4 w-4" /> Dyslexic Advantage
                 </Button>
               </div>
             </div>
