@@ -2,7 +2,8 @@
 import React from 'react';
 import LearningCard from './LearningCard';
 import ReadingText from './ReadingText';
-import { BookOpen, Video, Mic, Puzzle } from 'lucide-react';
+import { BookOpen, Video, Mic, Puzzle, GraduationCap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const LearningModules = () => {
   return (
@@ -19,9 +20,11 @@ const LearningModules = () => {
             Let's practice reading with a fun story about space explorers! 
             Click to start your reading adventure.
           </ReadingText>
-          <button className="w-full mt-2 bg-white/50 hover:bg-white/70 transition-colors rounded-xl py-2 font-bold">
-            Start Reading
-          </button>
+          <Link to="/reading">
+            <button className="w-full mt-2 bg-white/50 hover:bg-white/70 transition-colors rounded-xl py-2 font-bold">
+              Start Reading
+            </button>
+          </Link>
         </LearningCard>
         
         <LearningCard 
@@ -33,9 +36,11 @@ const LearningModules = () => {
             Watch a 5-minute video about animals in the rainforest. 
             Learn amazing facts with colorful animations!
           </ReadingText>
-          <button className="w-full mt-2 bg-white/50 hover:bg-white/70 transition-colors rounded-xl py-2 font-bold">
-            Play Video
-          </button>
+          <Link to="/resources">
+            <button className="w-full mt-2 bg-white/50 hover:bg-white/70 transition-colors rounded-xl py-2 font-bold">
+              Play Video
+            </button>
+          </Link>
         </LearningCard>
         
         <LearningCard 
@@ -47,23 +52,27 @@ const LearningModules = () => {
             Practice saying tricky words out loud. Listen to the correct 
             pronunciation and then try it yourself!
           </ReadingText>
-          <button className="w-full mt-2 bg-white/50 hover:bg-white/70 transition-colors rounded-xl py-2 font-bold">
-            Try Speaking
-          </button>
+          <Link to="/resources?tab=practice">
+            <button className="w-full mt-2 bg-white/50 hover:bg-white/70 transition-colors rounded-xl py-2 font-bold">
+              Try Speaking
+            </button>
+          </Link>
         </LearningCard>
         
         <LearningCard 
-          title="Word Games" 
-          icon={<Puzzle />}
+          title="Learning Resources" 
+          icon={<GraduationCap />}
           color="green"
         >
           <ReadingText>
-            Play fun word games to improve your spelling and vocabulary. 
-            Earn stars for every game you complete!
+            Explore our collection of videos, stories, assignments and practice
+            sessions designed to help with dyslexia!
           </ReadingText>
-          <button className="w-full mt-2 bg-white/50 hover:bg-white/70 transition-colors rounded-xl py-2 font-bold">
-            Play Games
-          </button>
+          <Link to="/resources">
+            <button className="w-full mt-2 bg-white/50 hover:bg-white/70 transition-colors rounded-xl py-2 font-bold">
+              Explore Resources
+            </button>
+          </Link>
         </LearningCard>
       </div>
     </div>

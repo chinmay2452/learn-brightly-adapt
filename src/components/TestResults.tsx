@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import ReadingText from '@/components/ReadingText';
-import { AlertCircle, BookOpen, Home, Redo } from 'lucide-react';
+import { AlertCircle, BookOpen, Home, Redo, GraduationCap } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { motion } from "framer-motion";
 
@@ -78,19 +78,29 @@ const TestResults: React.FC<TestResultsProps> = ({ score }) => {
             </Button>
           </Link>
           
+          <Link to="/resources" className="block">
+            <Button variant="outline" className="w-full h-auto py-4 flex flex-col items-center gap-2 bg-pastel-blue/10 hover:bg-pastel-blue/20 border-pastel-blue/30">
+              <GraduationCap className="h-5 w-5" />
+              <span>Explore learning resources</span>
+            </Button>
+          </Link>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Link to="/test" className="block">
             <Button variant="outline" className="w-full h-auto py-4 flex flex-col items-center gap-2 bg-pastel-green/10 hover:bg-pastel-green/20 border-pastel-green/30">
               <Redo className="h-5 w-5" />
               <span>Take the test again</span>
             </Button>
           </Link>
+          
+          <Link to="/" className="block">
+            <Button className="w-full h-auto py-4 flex flex-col items-center gap-2 bg-primary hover:bg-primary/90">
+              <Home className="h-5 w-5" />
+              <span>Return to Home</span>
+            </Button>
+          </Link>
         </div>
-        
-        <Link to="/" className="block">
-          <Button className="w-full mt-4 bg-primary hover:bg-primary/90">
-            <Home className="mr-2 h-4 w-4" /> Return to Home
-          </Button>
-        </Link>
       </div>
     </div>
   );

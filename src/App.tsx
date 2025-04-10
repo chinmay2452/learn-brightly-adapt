@@ -11,6 +11,7 @@ import Games from "./pages/Games";
 import Profile from "./pages/Profile";
 import DyslexiaInfo from "./pages/DyslexiaInfo";
 import DyslexiaTest from "./pages/DyslexiaTest";
+import Resources from "./pages/Resources";
 import Navigation from "./components/Navigation";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/profile" element={<Profile />} />
           <Route path="/dyslexia" element={<DyslexiaInfo />} />
           <Route path="/test" element={<DyslexiaTest />} />
+          <Route path="/resources" element={<Resources />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Navigation />
