@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { 
   Sheet, 
@@ -11,7 +12,7 @@ import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
-import { Type, TextCursor, LineSpacing, Palette } from 'lucide-react';
+import { Type, TextCursor, AlignJustify, Palette } from 'lucide-react';
 
 interface TextStyleSettings {
   fontSize: number;
@@ -100,7 +101,7 @@ const TextStyleSettings = () => {
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <LineSpacing className="h-4 w-4" />
+                <AlignJustify className="h-4 w-4" />
                 <Label htmlFor="line-spacing">Line Spacing</Label>
               </div>
               <span className="text-sm">{Math.round(settings.lineSpacing * 100)}%</span>
