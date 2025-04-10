@@ -2,6 +2,7 @@
 import React from 'react';
 import { BookOpen, Settings, Volume2 } from 'lucide-react';
 import IconButton from './IconButton';
+import TextStyleSettings from './TextStyleSettings';
 
 const DyslexiaHeader = () => {
   return (
@@ -16,6 +17,7 @@ const DyslexiaHeader = () => {
           <button className="p-2 rounded-full bg-pastel-yellow hover:bg-amber-200 transition-colors">
             <Volume2 className="h-6 w-6" />
           </button>
+          <TextStyleSettings />
           <button className="p-2 rounded-full bg-pastel-purple hover:bg-purple-200 transition-colors">
             <Settings className="h-6 w-6" />
           </button>

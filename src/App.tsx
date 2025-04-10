@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Reading from "./pages/Reading";
 import Games from "./pages/Games";
 import Profile from "./pages/Profile";
+import DyslexiaInfo from "./pages/DyslexiaInfo";
 import Navigation from "./components/Navigation";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/reading" element={<Reading />} />
           <Route path="/games" element={<Games />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/dyslexia" element={<DyslexiaInfo />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Navigation />

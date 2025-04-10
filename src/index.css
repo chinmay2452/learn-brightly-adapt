@@ -43,6 +43,10 @@
     --sidebar-accent-foreground: 240 10% 20%;
     --sidebar-border: 240 5.9% 80%;
     --sidebar-ring: 270 70% 60%;
+    
+    /* Text style settings */
+    --font-size-multiplier: 1;
+    --line-spacing-multiplier: 1;
   }
 }
 
@@ -70,6 +74,27 @@
   /* Dyslexia-friendly highlight for text selection */
   ::selection {
     @apply bg-pastel-yellow text-foreground;
+  }
+  
+  /* Text style adjustments for accessibility */
+  .use-dyslexic-font {
+    font-family: 'OpenDyslexic', 'Comic Sans MS', 'Arial', 'sans-serif';
+  }
+  
+  body:not(.use-dyslexic-font) {
+    font-family: 'Arial', 'Verdana', 'sans-serif';
+  }
+  
+  .high-contrast {
+    --foreground: 0 0% 0%;
+    --background: 0 0% 100%;
+    letter-spacing: 0.1em !important;
+    word-spacing: 0.15em !important;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6, span, a, button, input, textarea, label {
+    font-size: calc(1em * var(--font-size-multiplier));
+    line-height: calc(1.7 * var(--line-spacing-multiplier));
   }
 }
 
