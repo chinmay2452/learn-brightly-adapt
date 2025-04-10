@@ -6,7 +6,7 @@ import DyslexiaHeader from '@/components/DyslexiaHeader';
 import ProgressTracker from '@/components/ProgressTracker';
 import LearningCategories from '@/components/LearningCategories';
 import LearningModules from '@/components/LearningModules';
-import { Lightbulb, Book, Puzzle, User } from 'lucide-react';
+import { Lightbulb, Book, Puzzle, User, ClipboardCheck } from 'lucide-react';
 import AnimatedIcon from '@/components/AnimatedIcon';
 import ReadingText from '@/components/ReadingText';
 
@@ -41,6 +41,29 @@ const Index = () => {
             <AnimatedIcon animation="float" size="xl" className="text-8xl">
               <Lightbulb className="text-amber-500 h-24 w-24" />
             </AnimatedIcon>
+          </div>
+        </div>
+        
+        {/* Dyslexia Test Banner */}
+        <div className="bg-pastel-purple/80 rounded-2xl p-6 mb-8 shadow-lg animate-pop">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="flex-1">
+              <h2 className="text-2xl font-bold mb-2 text-white">Wondering if you have dyslexia?</h2>
+              <ReadingText className="text-white opacity-90 mb-4">
+                Take our quick screening test to check if you show signs of dyslexia. 
+                It only takes about 5 minutes to complete!
+              </ReadingText>
+              <Link to="/test">
+                <Button className="bg-white text-pastel-purple hover:bg-gray-100 rounded-xl py-5 px-6 text-lg font-bold shadow-md hover:shadow-lg flex items-center gap-2">
+                  <ClipboardCheck className="h-5 w-5" /> Take Dyslexia Test
+                </Button>
+              </Link>
+            </div>
+            <div className="w-full md:w-1/4 flex justify-center">
+              <AnimatedIcon animation="bounce" size="lg">
+                <ClipboardCheck className="text-white h-20 w-20" />
+              </AnimatedIcon>
+            </div>
           </div>
         </div>
         
