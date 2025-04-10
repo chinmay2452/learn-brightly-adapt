@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   Sheet, 
@@ -12,7 +11,7 @@ import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
-import { Type, TextCursor, LineHeight, Palette } from 'lucide-react';
+import { Type, TextCursor, LineSpacing, Palette } from 'lucide-react';
 
 interface TextStyleSettings {
   fontSize: number;
@@ -32,27 +31,21 @@ const TextStyleSettings = () => {
   });
 
   useEffect(() => {
-    // Apply font size
     document.documentElement.style.setProperty('--font-size-multiplier', settings.fontSize.toString());
-    
-    // Apply line spacing
     document.documentElement.style.setProperty('--line-spacing-multiplier', settings.lineSpacing.toString());
     
-    // Apply dyslexic font
     if (settings.useDyslexicFont) {
       document.body.classList.add('use-dyslexic-font');
     } else {
       document.body.classList.remove('use-dyslexic-font');
     }
     
-    // Apply high contrast
     if (settings.useHighContrast) {
       document.body.classList.add('high-contrast');
     } else {
       document.body.classList.remove('high-contrast');
     }
     
-    // Apply background color
     document.body.className = document.body.className
       .replace(/bg-pastel-\w+/g, '')
       .trim();
@@ -107,7 +100,7 @@ const TextStyleSettings = () => {
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <LineHeight className="h-4 w-4" />
+                <LineSpacing className="h-4 w-4" />
                 <Label htmlFor="line-spacing">Line Spacing</Label>
               </div>
               <span className="text-sm">{Math.round(settings.lineSpacing * 100)}%</span>
